@@ -343,6 +343,9 @@ on boot
     chown system system /sys/class/optical_sensors/proximity/p_status
     chown radio radio /sys/class/optical_sensors/proximity/ps_adc
 
+    # gesture sensors, all teh f's
+    write /sys/class/htc_sensorhub/sensor_hub/gesture_motion 807C
+
     chmod 664 /sys/devices/virtual/htc_sensorhub/sensor_hub/ap_calibrator_data_acc_rl
     chmod 664 /sys/devices/virtual/htc_sensorhub/sensor_hub/calibrator_data_acc
     chmod 664 /sys/devices/virtual/htc_sensorhub/sensor_hub/calibrator_data_acc_rl
