@@ -70,6 +70,8 @@ on init
     chmod 0220 /sys/class/power_supply/battery/disable_limit_chg
 
 on fs
+    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all fstab.qcom
 
     # Add rfg_3 mounting from stock. This way we will still boot if partition doesn't actually exist on the device.
