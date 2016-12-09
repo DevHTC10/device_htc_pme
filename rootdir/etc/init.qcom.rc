@@ -443,6 +443,9 @@ on boot
 
     write /sys/devices/soc/soc:fp_fpc1155/pinctl_set fpc1020_reset_active
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
 # Services begin here
 
 service adsprpcd /system/vendor/bin/adsprpcd
