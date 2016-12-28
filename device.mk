@@ -108,6 +108,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
 
+# Email
+PRODUCT_PACKAGES += \
+    Email
+
+# texting
+PRODUCT_PACKAGES += \
+    messaging
+
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera
