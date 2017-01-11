@@ -22,6 +22,7 @@
     <string name="dlg_ok">OK</string>
 
     <string name="screen_off_gesture_title">Screen off gestures</string>
+    <string name="screen_off_gesture_summary">Assign custom actions to recognizable screen-off gestures</string>
     <string name="group_applications">Applications</string>
     <string name="select_custom_app_title">Select custom application</string>
 
