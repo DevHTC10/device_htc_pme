@@ -108,10 +108,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
 
-# Browser
-PRODUCT_PACKAGES += \
-    Gello
-
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera
@@ -136,10 +132,6 @@ PRODUCT_PACKAGES += \
     fingerprint.msm8996 \
     fingerprintd
 
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # Gesture Handler
 PRODUCT_PACKAGES += \
     GestureHandler
@@ -159,6 +151,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
 
+# HTCDoze
+PRODUCT_PACKAGES += \
+		HTCDoze
+		
 # HTC Logging functions
 PRODUCT_PACKAGES += \
     libhlg \

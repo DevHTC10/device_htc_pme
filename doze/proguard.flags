@@ -1,0 +1,3 @@
+-keep class com.reaper.doze.htc.* {
+  *;
+}

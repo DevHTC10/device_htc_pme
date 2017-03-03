@@ -107,7 +107,7 @@
         <item>@string/reboot_reboot</item>
         <item>@string/reboot_soft</item>
         <item>@string/reboot_recovery</item>
-        <item>@string/reboot_download</item>
+        <item>@string/reboot_bootloader</item>
     </array>
 
     <!-- Do not translate. Defines the shutdown actions passed to the kernel.
@@ -116,7 +116,7 @@
         <item></item>
         <item>soft_reboot</item>
         <item>recovery</item>
-        <item>download</item>
+        <item>bootloader</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -232,6 +232,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+    <add-resource type="integer" name="config_deviceHardwareKeys"></add-resource>
     <integer name="config_deviceHardwareKeys">83</integer>
 
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
@@ -246,6 +247,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+    <add-resource type="integer" name="config_deviceHardwareWakeKeys"></add-resource>
     <integer name="config_deviceHardwareWakeKeys">64</integer>
 
 	<!-- Control the behavior when the user long presses the home button.
@@ -322,4 +324,9 @@
 
     <!-- Use ERI text for network name on CDMA LTE -->
     <bool name="config_LTE_eri_for_network_name">false</bool>
+
+    <!-- Whether to intercept inputs on screen off. -->
+    <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
+    <bool name="config_enableKeyHandler">true</bool>
+
 </resources>
