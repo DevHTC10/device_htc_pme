@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.reaper.doze.htc"
+    package="com.aquarios.doze.htc"
     android:versionCode="1"
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
@@ -16,14 +16,14 @@
         android:label="HTCDoze"
         android:persistent="true">
 
-        <receiver android:name="com.reaper.doze.htc.BootCompletedReceiver">
+        <receiver android:name="com.aquarios.doze.htc.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <service android:name="com.reaper.doze.htc.HTCDozeService"
+        <service android:name="com.aquarios.doze.htc.HTCDozeService"
                  android:permission="HTCDozeService">
         </service>
 

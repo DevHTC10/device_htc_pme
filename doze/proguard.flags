@@ -1,3 +1,3 @@
--keep class com.reaper.doze.htc.* {
+-keep class com.aquarios.doze.htc.* {
   *;
 }

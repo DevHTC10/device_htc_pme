@@ -160,6 +160,10 @@ PRODUCT_PACKAGES += \
     libhlg \
     liblog_htc
 
+# Snap
+PRODUCT_PACKAGES += \
+   Snap
+
 # Init
 PRODUCT_PACKAGES += \
     charger.fstab.qcom \

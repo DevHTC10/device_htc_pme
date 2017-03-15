@@ -13,16 +13,16 @@
 # limitations under the License.
 
 $(call inherit-product, device/htc/pme/full_pme.mk)
-$(call inherit-product, vendor/reaper/config/common_full_phone.mk)
+$(call inherit-product, vendor/aquarios/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := pme
-PRODUCT_NAME := reaper_pme
+PRODUCT_NAME := aquarios_pme
 PRODUCT_BRAND := HTC
 PRODUCT_MODEL := HTC 10
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_RELEASE_NAME := pme
 
-# Reaper Device Maintainers
+# aquarios Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	DEVICE_MAINTAINERS="Bob T"

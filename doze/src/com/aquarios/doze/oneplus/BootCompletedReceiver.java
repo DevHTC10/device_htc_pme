@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 The ReaperRoms Project
+ * Copyright (c) 2017 The aquariosRoms Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.reaper.doze.htc;
+package com.aquarios.doze.htc;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
