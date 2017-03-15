@@ -120,6 +120,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_camera
 
+# Snap
+PRODUCT_PACKAGES += \
+    Snap
+
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
     cneapiclient \
@@ -257,6 +261,10 @@ PRODUCT_PACKAGES += \
     libshim_power \
     power.msm8996 \
     thermal.msm8996
+
+# Properties
+PRODUCT_PACKAGES += \
+    operator-properties
 
 # QMI
 PRODUCT_PACKAGES += \
