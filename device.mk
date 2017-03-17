@@ -169,7 +169,6 @@ PRODUCT_PACKAGES += \
 		
 # HTC Logging functions
 PRODUCT_PACKAGES += \
-    libhlg \
     liblog_htc
 
 # Snap
