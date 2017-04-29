@@ -35,4 +35,20 @@
     <string name="double_tap_title">Double tap</string>
     <string name="camera_title">Longpress volume in landscape</string>
 
+     <!-- Notification slider -->
+    <string name="notification_slider">Notification slider</string>
+    <string name="action">Action</string>
+
+    <string name="top_position">Top position</string>
+    <string name="middle_position">Middle position</string>
+    <string name="bottom_position">Bottom position</string>
+    <string name="total_silence">Total silence</string>
+    <string name="alarms_only">Alarms only</string>
+    <string name="priority_only">Priority only</string>
+    <string name="none">All notifications</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="ring">Ring</string>
+
+    <string name="button_swap_title">Swap buttons</string>
+    <string name="button_swap_summary">Swap the order of recents and back buttons</string>
 </resources>

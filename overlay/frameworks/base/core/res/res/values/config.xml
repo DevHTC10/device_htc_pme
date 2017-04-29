@@ -309,18 +309,24 @@
     <!-- Use ERI text for network name on CDMA LTE -->
     <bool name="config_LTE_eri_for_network_name">false</bool>
 
-<<<<<<< HEAD
     <!-- Whether to intercept inputs on screen off. -->
     <add-resource type="bool" name="config_enableKeyHandler"></add-resource>
     <bool name="config_enableKeyHandler">true</bool>
-=======
+
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
->>>>>>> cf6b265... Add DeviceHandler to pme
 
     <!-- Proximity check on screen on -->
     <bool name="config_proximityCheckOnWake">true</bool>
 
     <!-- Proximity check timeout -->
     <integer name="config_proximityCheckTimeout">100</integer>
+
+    <!-- The list absolute paths of jar/apk files containing the device specific handlers,
+         delimited by File.pathSeparator, which defaults to ":" on Android -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/app/DeviceHandler/DeviceHandler.apk</string>
+
+    <!-- Full qualified name of the class that implements
+         com.android.internal.os.DeviceKeyHandler interface. -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.slim.device.KeyHandler</string>
 </resources>
