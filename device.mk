@@ -246,6 +246,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfcscc_access.xml:system/etc/nfcscc_access.xml \
     $(LOCAL_PATH)/configs/nfcse_access.xml:system/etc/nfcse_access.xml
 
+# Performance / IOP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/public.libraries.txt:system/vendor/etc/public.libraries.txt
+
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -283,6 +288,10 @@ PRODUCT_PACKAGES += \
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
+
+# Virtual Reality
+PRODUCT_PACKAGES += \
+    vr.msm8996
 
 # Wifi
 PRODUCT_PACKAGES += \

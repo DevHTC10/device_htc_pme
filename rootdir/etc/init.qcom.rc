@@ -69,6 +69,9 @@ on init
     chown system system /sys/class/power_supply/battery/disable_limit_chg
     chmod 0220 /sys/class/power_supply/battery/disable_limit_chg
 
+on post-fs
+    chmod 0755 /sys/kernel/debug/tracing
+
 on fs
     mount_all fstab.qcom
 
@@ -169,10 +172,13 @@ on post-fs-data
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
-    # Create directory for perfd
-    mkdir /data/system/perfd 2770 root system
+    # Create PERFD deamon related dirs
+    setprop ro.min_freq_0 384000
+    mkdir /data/misc/perfd 0755 root system
+    chmod 2755 /data/misc/perfd
+    mkdir /data/system/perfd 0770 root system
     rm /data/system/perfd/default_values
-    start perfd
+    chmod 2770 /data/system/perfd
 
     # Create IOP  deamon related dirs
     mkdir /data/misc/iop 0770 root system
@@ -447,6 +453,12 @@ service fingerprintd /system/bin/fingerprintd
     group system input
     writepid /dev/cpuset/system-background/tasks
 
+service htcdcpd /system/bin/htcdcpd
+    class main
+    user root
+    group root
+    writepid /dev/cpuset/system-background/tasks
+
 service hvdcp_opti /system/bin/hvdcp_opti
     class main
     user root
@@ -548,12 +560,12 @@ on property:sys.shutdown.requested=*
     stop per_proxy
 
 service perfd /system/vendor/bin/perfd
-    class main
-    user root
-    group root readproc
-    socket perfd seqpacket 0666 root system
-    disabled
-    writepid /dev/cpuset/system-background/tasks
+   class main
+   user root
+   group root readproc system
+   disabled
+   socket perfd seqpacket 0666 root system
+   writepid /dev/cpuset/system-background/tasks
 
 service iop /system/bin/iop
     class main
@@ -682,6 +694,12 @@ service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     user root
     group root
     oneshot
+    disabled
+
+service profiler_daemon /system/bin/profiler_daemon
+    class late_start
+    user root
+    group root
     disabled
 
 # Firmware linking to /firmware/image
