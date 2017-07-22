@@ -65,6 +65,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/htc/msm8996
 TARGET_KERNEL_CONFIG := pme_defconfig
 
+# KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-7.x/bin
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 
