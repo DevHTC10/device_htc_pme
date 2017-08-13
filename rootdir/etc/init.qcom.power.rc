@@ -1,6 +1,4 @@
 on init
-    # This is missing from init.rc
-    chmod 0660 /dev/cpuctl
     
     # Create Power HAL tunables
     mkdir /dev/voxpopuli 0555 system system
@@ -25,8 +23,12 @@ on boot
     # set default schedTune value for foreground/top-app (only affects EAS)
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.boost 0
+    write /dev/stune/background/schedtune.boost 0
+    write /dev/stune/background/schedtune.prefer_idle 0
     write /dev/stune/top-app/schedtune.boost 0
     write /dev/stune/top-app/schedtune.prefer_idle 1
+    write /dev/stune/schedtune.boost 0
+    write /dev/stune/schedtune.prefer_idle 0
 
     # Enable sched boost
     write /proc/sys/kernel/sched_boost 1
@@ -34,14 +36,14 @@ on boot
     # Set Power HAL tunables
 
     write /dev/voxpopuli/enable_interaction_boost   1
-    write /dev/voxpopuli/fling_min_boost_duration   200
+    write /dev/voxpopuli/fling_min_boost_duration   250
     write /dev/voxpopuli/fling_max_boost_duration   2500
-    write /dev/voxpopuli/fling_boost_topapp         5
-    write /dev/voxpopuli/fling_min_freq_big         614
-    write /dev/voxpopuli/fling_min_freq_little      1118
-    write /dev/voxpopuli/touch_boost_duration       200
-    write /dev/voxpopuli/touch_boost_topapp         5
-    write /dev/voxpopuli/touch_min_freq_big         614
+    write /dev/voxpopuli/fling_boost_topapp         10
+    write /dev/voxpopuli/fling_min_freq_big         1036
+    write /dev/voxpopuli/fling_min_freq_little      1036
+    write /dev/voxpopuli/touch_boost_duration       250
+    write /dev/voxpopuli/touch_boost_topapp         0
+    write /dev/voxpopuli/touch_min_freq_big         1036
     write /dev/voxpopuli/touch_min_freq_little      1036    
     chmod 0644 /dev/voxpopuli/enable_interaction_boost
     chmod 0644 /dev/voxpopuli/fling_min_boost_duration
