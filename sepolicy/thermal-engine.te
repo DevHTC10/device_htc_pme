@@ -1,2 +1,1 @@
-# Read and control gpu frequencies
-allow thermal-engine sysfs_kgsl:file rw_file_perms;
+type_transition thermal-engine socket_device:sock_file thermal_socket;
