@@ -264,6 +264,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    libwifi-hal-qcom \
     libwpa_client \
     hostapd \
     wlutil \
