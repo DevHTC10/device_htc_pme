@@ -213,9 +213,8 @@ PRODUCT_PACKAGES += \
     com.nxp.nfc.nq \
     libnqnfc-nci \
     libp61-jcop-kit \
-    nfc_nci.nqx.default \
     NQNfcNci \
-    Tag
+    nfc_nci.msm8996
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \

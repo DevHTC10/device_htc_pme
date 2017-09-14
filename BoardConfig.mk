@@ -163,7 +163,7 @@ LINKER_FORCED_SHIM_LIBS := /system/vendor/bin/slim_daemon|liblog_htc.so
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # NFC
-BOARD_NFC_CHIPSET := pn548
+BOARD_NFC_HAL_SUFFIX := msm8996
 TARGET_USES_NQ_NFC := true
 
 # Power
