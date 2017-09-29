@@ -133,7 +133,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := \
-    $(COMMON_PATH)/manifest.xml
+    device/htc/pme/manifest.xml
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
